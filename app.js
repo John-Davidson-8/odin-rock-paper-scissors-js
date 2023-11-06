@@ -16,12 +16,34 @@ function playRound(playerSelection, computerSelection) {
   playerSelection = prompt(
     "Choose your weapon: Rock, Paper or Scissors?"
   ).toLocaleLowerCase();
-  
-  if (playerSelection === "Rock" && computerSelection === "Paper") { 
-  return "You lose! Paper beats Rock";
-}
-  else if 
+
+  if (playerSelection === "Paper" && computerSelection === "Rock") {
+    return "You lose! Paper beats Rock";
+  } else if (playerSelection === "Rock" && computerSelection === "Paper") {
+    return "You win! Paper beats Rock";
+  }
+
+  if (playerSelection === "Scissors" && computerSelection === "Paper") {
+    return "You Win! Scissors beats Paper";
+  } else if (playerSelection === "Paper" && computerSelection === "Scissors") {
+    return "You lose! Scissors beats paper";
+  }
+
+  if (playerSelection === "Rock" && computerSelection === "Scissors") {
+    return "You win! Rock beats Scissors";
+  } else if (playerSelection === "Scissors" && computerSelection === "Rock") {
+    return "You lose! Rock beats Scissors";
+  } else if (playerSelection === computerSelection) {
+    return "It's a tie!";
+  }
 }
 
-// playerSelection = "Rock";
-// prompt(playerSelection);
+// Next up is to create a function to play the game in with an iteration to play five times.
+
+function game() {
+  for (let i = 0; i < 5; i++) {
+    playRound(playerSelection, computerSelection);
+  }
+}
+
+console.log(game());
