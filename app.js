@@ -1,3 +1,5 @@
+console.log("hi");
+
 const options = ["rock", "paper", "scissors"];
 
 function getComputerChoice() {
@@ -31,11 +33,24 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-// function game() {
-//   console.log("Welcome!");
-//   for (let i = 0; i > 5; i++) {
-//     const playerSelection = "rock";
-//     const computerSelection = getComputerChoice();
-//     playRound(playerSelection, computerSelection);
-//   }
-// }
+function getPlayerChoice() {
+  let validatedInput = false;
+  while (validatedInput == false) {
+    const choice = prompt("Rock Paper Scissors");
+  }
+}
+
+// const playerSelection = "rock";
+// const computerSelection = getComputerChoice();
+// console.log(playRound(playerSelection, computerSelection));
+
+function game() {
+  console.log("Welcome!");
+  for (let i = 0; i > 5; i++) {
+    const playerSelection = "rock";
+    const computerSelection = getComputerChoice();
+    console.log(playRound(playerSelection, computerSelection));
+  }
+}
+
+game();
